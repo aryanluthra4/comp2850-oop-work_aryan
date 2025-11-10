@@ -7,13 +7,13 @@ class WordleTest : StringSpec({
     "isValid returns true for valid 5-letter words" {
         isValid("apple") shouldBe true
         isValid("app1e") shouldBe false
-        isValid("apps") shouldBe false
+        isValid("app") shouldBe false
     }
 
     "pickRandomWord removes the selected word" {
         val words = mutableListOf("apple", "berry", "cherry")
-        val chosen = pickRandomWord(words)
-        words.contains(chosen) shouldBe false
+        val selected = pickRandomWord(words)
+        words.contains(selected) shouldBe false
     }
 
     "evaluateGuess basic match checking" {
